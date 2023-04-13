@@ -70,12 +70,14 @@ class Parallelogram(Shape):
     def __init__(self, w, h):
         super().__init__(w, h) # Calls the Shape constructor
         
-    # __str__ method to view the Parallelogram as a string
+    # __str__ method to print the Parallelogram as a string
     def __str__(self):
         image = ""
         shift = self.height 
+        # add * to empty string
         for i in range(self.height):
             image += "  " * shift + "* " * (self.width) + "\n"
+            #reduce shift by 1 so it creates slanted sides
             shift -= 1
         return image
     
